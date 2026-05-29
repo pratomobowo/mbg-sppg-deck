@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Sistem Monitoring MBG - Next IT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- SLIDE 1: COVER -->
+    <section class="slide slide-cover active" data-slide="1">
+        <div class="cover-content">
+            <div class="cover-badge">PT Niaga Expert Teknologi</div>
+            <h1 class="cover-title">Sistem Monitoring &amp; Procurement<br>Dapur <span>MBG</span></h1>
+            <p class="cover-subtitle">Pusat Kontrol Terpadu untuk Akuntabilitas Operasional,<br>Transparansi Keuangan, dan Pengawasan Kepatuhan Gizi Multi-Yayasan</p>
+            <div class="cover-meta">
+                <span>Makanan Bergizi Gratis</span>
+                <span class="dot">·</span>
+                <span>Mei 2026</span>
+            </div>
+        </div>
+        <div class="cover-decoration"></div>
+    </section>
+
+    <!-- SLIDE 2: RINGKASAN EKSEKUTIF -->
+    <section class="slide" data-slide="2">
+        <p class="slide-label">RINGKASAN EKSEKUTIF</p>
+        <h2 class="slide-title">Program <span>Makanan Bergizi Gratis</span></h2>
+        <p class="slide-subtitle">Inisiatif strategis nasional untuk meningkatkan kualitas gizi anak-anak dan ibu hamil di seluruh Indonesia — namun pengelolaannya masih menghadapi tantangan operasional yang kompleks.</p>
+        <div class="data-grid">
+            <div class="data-card">
+                <div class="data-icon">💰</div>
+                <div class="data-label">Asimetri Informasi</div>
+                <p class="data-desc">Harga beli bahan baku di lapangan sulit dikontrol terhadap harga acuan pasar. Risiko overbudgeting tinggi.</p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon">⏳</div>
+                <div class="data-label">Persetujuan Lambat</div>
+                <p class="data-desc">Proses birokrasi Surat Pesanan (DO) masih manual. Distribusi logistik harian terhambat.</p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon">🏢</div>
+                <div class="data-label">Multi-Yayasan</div>
+                <p class="data-desc">Butuh sistem multi-tenant yang menampung banyak yayasan tanpa kebocoran data antar-yayasan.</p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon">📊</div>
+                <div class="data-label">Kepatuhan Gizi</div>
+                <p class="data-desc">Belum ada sistem kontrol yang menjamin menu harian memenuhi standar porsi dan nilai gizi BGN.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: TANTANGAN OPERASIONAL -->
+    <section class="slide" data-slide="3">
+        <p class="slide-label">MASALAH DI LAPANGAN</p>
+        <h2 class="slide-title">4 Tantangan <span>Operasional</span> Utama</h2>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-num">01</div>
+                <h3>Asimetri Informasi Keuangan & Belanja</h3>
+                <p>Sulitnya mengontrol harga beli bahan baku yang diinput di lapangan terhadap harga acuan pasar. Meningkatkan risiko pemborosan anggaran (overbudgeting).</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-num">02</div>
+                <h3>Alur Persetujuan yang Lambat</h3>
+                <p>Proses birokrasi persetujuan Surat Pesanan (DO) masih manual atau tidak terintegrasi, menghambat distribusi logistik harian.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-num">03</div>
+                <h3>Segregasi Data Multi-Yayasan</h3>
+                <p>Kebutuhan sistem yang mampu menampung banyak yayasan secara mandiri (multi-tenant), tanpa kebocoran data sensitif antar-yayasan.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-num">04</div>
+                <h3>Akuntabilitas & Kepatuhan Gizi</h3>
+                <p>Belum ada sistem kontrol yang menjamin menu harian memenuhi standar porsi dan nilai gizi yang ditetapkan BGN.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: SOLUSI -->
+    <section class="slide" data-slide="4">
+        <p class="slide-label">SOLUSI</p>
+        <h2 class="slide-title">Pusat Kontrol <span>Tunggal</span></h2>
+        <p class="slide-subtitle">Sistem berbasis web terintegrasi dan responsif (mobile-friendly) yang bertindak sebagai <strong>Single Control Center</strong> menggabungkan modul operasional, keuangan, pengadaan, dan kontrol harga.</p>
+        <div class="feature-highlights">
+            <div class="highlight-row">
+                <div class="highlight-item">
+                    <span class="hl-icon">🔐</span>
+                    <div>
+                        <strong>Multi-Tenant Secure</strong>
+                        <p>Isolasi data ketat per yayasan dengan Row-Level Security</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="hl-icon">📱</span>
+                    <div>
+                        <strong>Mobile-Friendly PWA</strong>
+                        <p>Offline-first, instal di homescreen, auto background sync</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-row">
+                <div class="highlight-item">
+                    <span class="hl-icon">✅</span>
+                    <div>
+                        <strong>State Machine Approval</strong>
+                        <p>4 tingkat persetujuan DO dengan catatan revisi digital</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="hl-icon">🛡️</span>
+                    <div>
+                        <strong>Price Guard Control</strong>
+                        <p>Flag otomatis jika harga input melebihi 5% dari acuan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: 12 MODUL OVERVIEW -->
+    <section class="slide" data-slide="5">
+        <p class="slide-label">FITUR SISTEM</p>
+        <h2 class="slide-title">12 <span>Modul</span> Terintegrasi</h2>
+        <div class="module-grid">
+            <div class="module-card">
+                <span class="mod-num">01</span>
+                <h4>Master Data & Konfigurasi</h4>
+                <p>Profil dapur, menu, supplier, katalog item & nilai gizi, harga acuan mingguan</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">02</span>
+                <h4>Autentikasi & RBAC</h4>
+                <p>JWT login, 7 peran pengguna, segregasi tenant ketat</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">03</span>
+                <h4>Monitoring Harian</h4>
+                <p>Laporan shift, produksi vs target, distribusi, foto, approval</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">04</span>
+                <h4>Dashboard Gizi BGN</h4>
+                <p>Kalkulator otomatis, grafik kepatuhan, dashboard read-only BGN</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">05</span>
+                <h4>Stok & Inventaris</h4>
+                <p>Ledger otomatis, auto-increment/deduct, stock opname mingguan</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">06</span>
+                <h4>Accounting Ledger</h4>
+                <p>Single-entry, dana per 12 hari, upload nota PDF, ekspor laporan</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">07</span>
+                <h4>Advanced Procurement</h4>
+                <p>DO multi-item, state machine 4 tingkat, Price Guard, PDF signature</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">08</span>
+                <h4>Tracking & Tanda Terima</h4>
+                <p>Konfirmasi di sekolah, foto serah terima, TTD digital penerima</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">09</span>
+                <h4>Peta & CCTV Viewer</h4>
+                <p>Sebaran lokasi dapur, URL streaming CCTV tanpa beban server</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">10</span>
+                <h4>WA Approval Gateway</h4>
+                <p>Notifikasi real-time, one-click deep link approval via WhatsApp</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">11</span>
+                <h4>PWA Offline-First</h4>
+                <p>Offline caching, auto background sync saat koneksi pulih</p>
+            </div>
+            <div class="module-card">
+                <span class="mod-num">12</span>
+                <h4>Audit Trail Immutable</h4>
+                <p>Log aktivitas menyeluruh, append-only, tidak bisa dihapus/diubah</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: MODUL 1-4 DETAIL -->
+    <section class="slide" data-slide="6">
+        <p class="slide-label">MODUL INTI (1-4)</p>
+        <h2 class="slide-title">Fondasi <span>Sistem</span></h2>
+        <div class="detail-grid">
+            <div class="detail-card">
+                <h3><span class="detail-num">01</span> Master Data & Konfigurasi</h3>
+                <ul>
+                    <li>Data Dapur: profil, lokasi, kapasitas, PIC</li>
+                    <li>Penjadwalan Menu: harian, mingguan, bulanan</li>
+                    <li>Katalog Supplier: statis per yayasan</li>
+                    <li>Katalog Item & Nilai Gizi: kalori, karbohidrat, protein, lemak, serat</li>
+                    <li>Harga Acuan Mingguan: benchmark validasi belanja</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">02</span> RBAC 7 Peran</h3>
+                <ul>
+                    <li>Super Admin, PIC Dapur, SPPG, SPPI</li>
+                    <li>Full Authorize, BGN, Investor</li>
+                    <li>JWT + reset password via email</li>
+                    <li>Segregasi tenant: yayasan_id di setiap query</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">03</span> Laporan Shift Harian</h3>
+                <ul>
+                    <li>Form input: produksi, target vs realisasi, distribusi</li>
+                    <li>Catatan kendala & upload foto masakan</li>
+                    <li>Approval wajib dari Full Authorize sebelum final</li>
+                    <li>Masuk ke rekap dashboard</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">04</span> Dashboard Kepatuhan Gizi</h3>
+                <ul>
+                    <li>Kalkulator gizi otomatis saat menyusun menu</li>
+                    <li>Grafik perbandingan vs standar BGN</li>
+                    <li>Dashboard read-only khusus BGN & Investor</li>
+                    <li>Memudahkan audit real-time, kurangi biaya survei lab</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: MODUL 5-8 DETAIL -->
+    <section class="slide" data-slide="7">
+        <p class="slide-label">MODUL OPERASIONAL (5-8)</p>
+        <h2 class="slide-title">Transparansi & <span>Akuntabilitas</span></h2>
+        <div class="detail-grid">
+            <div class="detail-card">
+                <h3><span class="detail-num">05</span> Stok & Inventaris</h3>
+                <ul>
+                    <li>Inventory Ledger otomatis terhubung Procurement</li>
+                    <li>Auto-increment saat barang diterima</li>
+                    <li>Auto-deduct berdasarkan porsi dimasak</li>
+                    <li>Stock opname mingguan untuk deteksi selisih</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">06</span> Accounting Single-Entry</h3>
+                <ul>
+                    <li>Buku kas masuk & keluar sederhana</li>
+                    <li>Dana masuk per 12 hari (konfirmasi Authorize)</li>
+                    <li>Kategori: Bahan Masak & Biaya Operasional</li>
+                    <li>Upload nota PDF + ekspor laporan dengan TTD</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">07</span> Advanced Procurement</h3>
+                <ul>
+                    <li>DO multi-item, 1 supplier per dokumen</li>
+                    <li>Approval 4 tingkat: PIC → SPPG → SPPI → Full Auth</li>
+                    <li>Jika reject: wajib catatan revisi</li>
+                    <li>Price Guard: flag > 5% dari harga acuan</li>
+                    <li>PDF Surat Pesanan + Hybrid Signature</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">08</span> Tracking & Tanda Terima</h3>
+                <ul>
+                    <li>Input driver & waktu keberangkatan</li>
+                    <li>Konfirmasi di sekolah (mobile-friendly)</li>
+                    <li>Upload foto serah terima + TTD digital</li>
+                    <li>Rantai bukti 100%: dapur → sekolah</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 8: MODUL 9-12 DETAIL -->
+    <section class="slide" data-slide="8">
+        <p class="slide-label">MODUL ADVANCED (9-12)</p>
+        <h2 class="slide-title">Konektivitas & <span>Keamanan</span></h2>
+        <div class="detail-grid">
+            <div class="detail-card">
+                <h3><span class="detail-num">09</span> Peta & CCTV Viewer</h3>
+                <ul>
+                    <li>Peta statis sebaran lokasi seluruh dapur</li>
+                    <li>URL streaming CCTV per dapur</li>
+                    <li>Akses: BGN & Super Admin</li>
+                    <li>Tanpa beban protokol streaming di server</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">10</span> WA Approval Gateway</h3>
+                <ul>
+                    <li>Integrasi WA API (Fonnte/Wablas/Twilio)</li>
+                    <li>Notifikasi otomatis ke HP approver</li>
+                    <li>Ringkasan nilai belanja + supplier</li>
+                    <li>One-click deep link ke halaman approval</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">11</span> PWA Offline-First</h3>
+                <ul>
+                    <li>Instal di homescreen seperti app native</li>
+                    <li>Offline caching: IndexedDB/LocalStorage</li>
+                    <li>Auto background sync saat koneksi pulih</li>
+                    <li>Tanpa interaksi manual dari PIC</li>
+                </ul>
+            </div>
+            <div class="detail-card">
+                <h3><span class="detail-num">12</span> Audit Trail Immutable</h3>
+                <ul>
+                    <li>Log setiap aksi: siapa, apa, kapan, IP</li>
+                    <li>Append-only — tidak bisa diubah/dihapus</li>
+                    <li>Termasuk Super Admin pun tidak bisa</li>
+                    <li>Timeline status dokumen kronologis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 9: ARSITEKTUR & MULTI-TENANT -->
+    <section class="slide" data-slide="9">
+        <p class="slide-label">ARSITEKTUR</p>
+        <h2 class="slide-title">Multi-Tenant <span>Isolation</span></h2>
+        <p class="slide-subtitle">Single Database with Row-Level Security (RLS) — menjamin secara mutlak Yayasan A tidak bisa mengakses data Yayasan B.</p>
+        <div class="arch-flow">
+            <div class="arch-step">
+                <div class="arch-icon">🔑</div>
+                <h4>JWT Authentication</h4>
+                <p>Token mendekripsi identitas user + yayasan_id</p>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">🛡️</div>
+                <h4>API Middleware</h4>
+                <p>Setiap request divalidasi & diisolasi</p>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">🗄️</div>
+                <h4>Database Query</h4>
+                <p>WHERE yayasan_id = user.yayasan_id</p>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">✅</div>
+                <h4>Data Terisolasi</h4>
+                <p>Yayasan A tidak bisa akses Yayasan B</p>
+            </div>
+        </div>
+        <div class="rbac-preview">
+            <h3>7 Peran RBAC Hierarkis</h3>
+            <div class="role-grid">
+                <div class="role-card"><strong>Super Admin</strong><span>Full access</span></div>
+                <div class="role-card"><strong>Full Authorize</strong><span>Approval final</span></div>
+                <div class="role-card"><strong>SPPI</strong><span>Level 2 approval</span></div>
+                <div class="role-card"><strong>SPPG</strong><span>Level 1 approval</span></div>
+                <div class="role-card"><strong>PIC Dapur</strong><span>Input & drafting</span></div>
+                <div class="role-card"><strong>BGN</strong><span>Read-only monitor</span></div>
+                <div class="role-card"><strong>Investor</strong><span>Read-only dashboard</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 10: STATE MACHINE PROCUREMENT -->
+    <section class="slide" data-slide="10">
+        <p class="slide-label">WORKFLOW</p>
+        <h2 class="slide-title">State Machine <span>Procurement</span></h2>
+        <p class="slide-subtitle">Dokumen Surat Pesanan (DO) dikontrol ketat melalui 4 tingkat persetujuan berjenjang.</p>
+        <div class="state-machine">
+            <div class="state-row">
+                <div class="state-node draft">
+                    <span class="state-icon">📝</span>
+                    <strong>Draft</strong>
+                    <p>PIC buat DO multi-item</p>
+                </div>
+                <div class="state-arrow">→</div>
+                <div class="state-node pending">
+                    <span class="state-icon">⏳</span>
+                    <strong>Pending SPPG</strong>
+                    <p>Level 1 review</p>
+                </div>
+                <div class="state-arrow">→</div>
+                <div class="state-node pending">
+                    <span class="state-icon">⏳</span>
+                    <strong>Pending SPPI</strong>
+                    <p>Level 2 review</p>
+                </div>
+                <div class="state-arrow">→</div>
+                <div class="state-node pending">
+                    <span class="state-icon">⏳</span>
+                    <strong>Pending Full Auth</strong>
+                    <p>Level 3 final</p>
+                </div>
+                <div class="state-arrow">→</div>
+                <div class="state-node approved">
+                    <span class="state-icon">✅</span>
+                    <strong>Approved</strong>
+                    <p>Dokumen terkunci</p>
+                </div>
+            </div>
+        </div>
+        <div class="state-notes">
+            <div class="note-card warning-note">
+                <strong>⚠️ Reject</strong>
+                <p>Approver wajib menulis Catatan Revisi. Dokumen kembali ke PIC dengan status Revised tanpa menghapus draf awal.</p>
+            </div>
+            <div class="note-card info-note">
+                <strong>🛡️ Price Guard</strong>
+                <p>Sistem otomatis membandingkan harga input dengan Harga Acuan. Flag peringatan jika selisih > 5% — terlihat oleh semua approver.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 11: TIMELINE ANALYSIS -->
+    <section class="slide" data-slide="11">
+        <p class="slide-label">ANALISIS TIMELINE</p>
+        <h2 class="slide-title">Kenapa 20 Hari <span>Tidak Makesense</span></h2>
+        <div class="timeline-compare">
+            <div class="compare-card bad">
+                <div class="compare-header">
+                    <span class="compare-badge">Opsi A</span>
+                    <strong>20 Hari Kerja</strong>
+                </div>
+                <ul>
+                    <li>State machine 4 tingkat butuh perancangan matang — rentan deadlock</li>
+                    <li>RBAC 7 peran perlu security matrix testing intensif</li>
+                    <li>PDF dinamis + hybrid signature + upload handling kompleks</li>
+                    <li>Hanya 2 hari untuk deployment + UAT + bug fix</li>
+                </ul>
+                <div class="risk-tag">⚠️ Risiko Kegagalan Tinggi</div>
+            </div>
+            <div class="compare-card good">
+                <div class="compare-header">
+                    <span class="compare-badge recommended">Rekomendasi</span>
+                    <strong>40 Hari Kerja</strong>
+                </div>
+                <ul>
+                    <li>State machine & RBAC dirancang dan diuji menyeluruh</li>
+                    <li>Semua 12 modul selesai dengan QA internal ketat</li>
+                    <li>PDF engine + file handling teroptimasi</li>
+                    <li>UAT 5-7 hari dengan stakeholder + iterasi revisi</li>
+                    <li>Garansi 60 hari pasca serah terima</li>
+                </ul>
+                <div class="risk-tag good-tag">✅ Kualitas Premium Terjamin</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 12: STRUKTUR TIM -->
+    <section class="slide" data-slide="12">
+        <p class="slide-label">TATA KELOLA</p>
+        <h2 class="slide-title">Struktur <span>Tim</span> & RACI</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">PM</div>
+                <h3>Project Manager</h3>
+                <p class="team-role">Lead · System Analyst · QA</p>
+                <p class="team-rate">Rp 24.000.000/bln</p>
+                <ul>
+                    <li>Timeline & koordinasi klien</li>
+                    <li>Analisis sistem & task breakdown</li>
+                    <li>Manual testing & QA sebelum UAT</li>
+                </ul>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar be">BE</div>
+                <h3>Developer 1</h3>
+                <p class="team-role">Fullstack · Backend Specialist</p>
+                <p class="team-rate">Rp 22.000.000/bln</p>
+                <ul>
+                    <li>Arsitektur database & segregasi</li>
+                    <li>REST API & state machine</li>
+                    <li>Integrasi WA Gateway API</li>
+                </ul>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar fe">FE</div>
+                <h3>Developer 2</h3>
+                <p class="team-role">Fullstack · Frontend Specialist</p>
+                <p class="team-rate">Rp 20.000.000/bln</p>
+                <ul>
+                    <li>UI/UX responsif & PWA</li>
+                    <li>Dashboard, peta, CCTV viewer</li>
+                    <li>PDF engine & hybrid signature</li>
+                </ul>
+            </div>
+        </div>
+        <div class="team-total">Total Gaji Personil per Bulan: Rp 66.000.000 (20 hari kerja)</div>
+    </section>
+
+    <!-- SLIDE 13: FITUR MATRIX -->
+    <section class="slide" data-slide="13">
+        <p class="slide-label">PERBANDINGAN OPSI</p>
+        <h2 class="slide-title">Matriks Fitur <span>3 Opsi</span></h2>
+        <div class="matrix-table">
+            <div class="matrix-header">
+                <div class="matrix-col label-col">Modul / Fitur</div>
+                <div class="matrix-col">Opsi A</div>
+                <div class="matrix-col">Opsi B</div>
+                <div class="matrix-col premier">Opsi C</div>
+            </div>
+            <div class="matrix-row"><span>1. Master Data & Konfigurasi</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>2. Autentikasi & RBAC 7 Peran</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>3. Monitoring Operasional Harian</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>4. Dashboard Kepatuhan Gizi</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>5. Stok & Inventaris</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>6. Accounting Single-Entry</span><span class="check">✓</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>7. Advanced Procurement</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>8. Tracking & Tanda Terima</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>9. Peta & CCTV Viewer</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>10. WA Approval Gateway</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>11. PWA Offline-First</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>12. Audit Trail Immutable</span><span class="cross">✗</span><span class="check">✓</span><span class="check">✓</span></div>
+            <div class="matrix-divider"><span>FITUR PREMIUM (Hanya Opsi C)</span></div>
+            <div class="matrix-row"><span>Executive Smart Dashboard</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>WA Daily Digest Otomatis</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>Dapur Health Score & Ranking</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>White Label Branding</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>On-Site Training 2 Sesi</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>Dokumentasi Cetak + Video</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+            <div class="matrix-row"><span>Garansi 1 Tahun Penuh</span><span class="cross">✗</span><span class="cross">✗</span><span class="check">✓</span></div>
+        </div>
+    </section>
+
+    <!-- SLIDE 14: RAB OPSI A vs B -->
+    <section class="slide" data-slide="14">
+        <p class="slide-label">RENCANA ANGGARAN BIAYA</p>
+        <h2 class="slide-title">Opsi A vs <span>Opsi B</span></h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Opsi A — Fast-Track</h3>
+                    <div class="pricing-timeline">20 Hari Kerja</div>
+                </div>
+                <div class="pricing-price">Rp 108.011.480</div>
+                <div class="pricing-ppn">Termasuk PPN 11%</div>
+                <ul class="pricing-features">
+                    <li class="has">6 modul inti (draf awal)</li>
+                    <li class="has">Rush premium 50%</li>
+                    <li class="no">Tanpa 6 fitur tambahan</li>
+                    <li class="no">Tanpa UAT terstruktur</li>
+                    <li class="no">Tanpa garansi</li>
+                </ul>
+                <div class="pricing-risk">⚠️ Tidak Direkomendasikan</div>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">REKOMENDASI</div>
+                <div class="pricing-header">
+                    <h3>Opsi B — Ideal</h3>
+                    <div class="pricing-timeline">40 Hari Kerja</div>
+                </div>
+                <div class="pricing-price">Rp 162.422.038</div>
+                <div class="pricing-ppn">Termasuk PPN 11%</div>
+                <ul class="pricing-features">
+                    <li class="has">Full 12 modul terintegrasi</li>
+                    <li class="has">QA internal ketat</li>
+                    <li class="has">UAT terstruktur 5-7 hari</li>
+                    <li class="has">Garansi bug 60 hari</li>
+                    <li class="has">Konfigurasi production stabil</li>
+                </ul>
+                <div class="pricing-value">Nilai Investasi Terbaik</div>
+            </div>
+        </div>
+        <div class="pricing-note">Selisih hanya Rp 54.410.558 (33%) — namun Opsi B memberikan 6 fitur krusial tambahan, UAT, QA, dan garansi.</div>
+    </section>
+
+    <!-- SLIDE 15: RAB OPSI C -->
+    <section class="slide" data-slide="15">
+        <p class="slide-label">OPSI PREMIER</p>
+        <h2 class="slide-title">Opsi <span>C</span> — Fully Operational Mandiri</h2>
+        <div class="premier-grid">
+            <div class="premier-pricing">
+                <h3>Opsi C — Premier</h3>
+                <div class="premier-timeline">50 Hari Kerja</div>
+                <div class="premier-price">Rp 220.000.000</div>
+                <div class="premier-ppn">Termasuk PPN 11%</div>
+            </div>
+            <div class="premier-features">
+                <div class="prem-feat">
+                    <span class="pf-icon">📊</span>
+                    <div><strong>Executive Smart Dashboard</strong><p>Anomaly detection & traffic light compliance</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">📱</span>
+                    <div><strong>WA Daily Digest</strong><p>Ringkasan otomatis ke HP pemilik yayasan setiap pagi</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">🏆</span>
+                    <div><strong>Dapur Health Score & Ranking</strong><p>Kompetisi sehat antar dapur mingguan</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">🎨</span>
+                    <div><strong>White Label Branding</strong><p>Login page & dashboard sesuai identitas yayasan</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">🎓</span>
+                    <div><strong>On-Site Training 2 Sesi</strong><p>Keliling ke seluruh dapur</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">📚</span>
+                    <div><strong>Dokumentasi + Video Tutorial</strong><p>Untuk onboarding mandiri</p></div>
+                </div>
+                <div class="prem-feat">
+                    <span class="pf-icon">🛡️</span>
+                    <div><strong>Garansi 1 Tahun + SLA Prioritas</strong><p>1x24 jam response time</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 16: SKEMA PEMBAYARAN -->
+    <section class="slide" data-slide="16">
+        <p class="slide-label">SKEMA PEMBAYARAN</p>
+        <h2 class="slide-title">3 <span>Termin</span> Milestone</h2>
+        <p class="slide-subtitle">Pembayaran bertahap berdasarkan progres yang dapat diverifikasi.</p>
+        <div class="payment-grid">
+            <div class="payment-card">
+                <div class="payment-step">Termin 1</div>
+                <div class="payment-pct">35%</div>
+                <div class="payment-amount">Rp 56.847.713</div>
+                <div class="payment-trigger">Setelah penandatanganan kontrak</div>
+                <div class="payment-desc">DP awal untuk memulai pengerjaan</div>
+            </div>
+            <div class="payment-card">
+                <div class="payment-step">Termin 2</div>
+                <div class="payment-pct">45%</div>
+                <div class="payment-amount">Rp 73.089.917</div>
+                <div class="payment-trigger">Setelah staging demo / milestone</div>
+                <div class="payment-desc">Sistem sudah bisa didemokan di staging</div>
+            </div>
+            <div class="payment-card">
+                <div class="payment-step">Termin 3</div>
+                <div class="payment-pct">20%</div>
+                <div class="payment-amount">Rp 32.484.408</div>
+                <div class="payment-trigger">Setelah UAT sign-off & go-live</div>
+                <div class="payment-desc">Pelunasan setelah production live</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 17: UAT & GARANSI -->
+    <section class="slide" data-slide="17">
+        <p class="slide-label">JAMINAN KUALITAS</p>
+        <h2 class="slide-title">UAT & <span>Garansi</span></h2>
+        <div class="uat-grid">
+            <div class="uat-card">
+                <h3>🔐 Skenario Keamanan</h3>
+                <p>Mencoba mengakses data Yayasan A dengan akun Yayasan B — membuktikan isolasi data 100%.</p>
+            </div>
+            <div class="uat-card">
+                <h3>📋 Skenario State Machine</h3>
+                <p>Menguji alur DO dari draft PIC → flag warning harga >5% → persetujuan bertahap → dokumen terkunci + PDF.</p>
+            </div>
+            <div class="uat-card">
+                <h3>📡 Skenario Offline</h3>
+                <p>Mematikan internet, input data, nyalakan kembali — verifikasi data masuk tanpa duplikasi.</p>
+            </div>
+            <div class="uat-card">
+                <h3>💬 Skenario WhatsApp</h3>
+                <p>Mengajukan DO, verifikasi pesan WA terkirim ke approver, link persetujuan berfungsi.</p>
+            </div>
+        </div>
+        <div class="warranty-box">
+            <h3>Garansi 60 Hari</h3>
+            <p>Perbaikan bug & error gratis selama 60 hari kalender pasca BAST. Perubahan scope di luar proposal = addendum terpisah.</p>
+        </div>
+    </section>
+
+    <!-- SLIDE 18: REKOMENDASI & CTA -->
+    <section class="slide slide-cta" data-slide="18">
+        <p class="slide-label">REKOMENDASI</p>
+        <h2 class="slide-title"><span>3 Opsi</span> Investasi</h2>
+        <div class="cta-grid">
+            <div class="cta-card">
+                <h3>Opsi A</h3>
+                <div class="cta-price">Rp 108 Jt</div>
+                <p>20 hari · Dasar · Risiko tinggi</p>
+                <span class="cta-tag">Minimal</span>
+            </div>
+            <div class="cta-card recommended">
+                <div class="cta-star">★</div>
+                <h3>Opsi B (Rekomendasi)</h3>
+                <div class="cta-price">Rp 162 Jt</div>
+                <p>40 hari · 12 modul · UAT · Garansi</p>
+                <span class="cta-tag">Nilai Terbaik</span>
+            </div>
+            <div class="cta-card">
+                <h3>Opsi C</h3>
+                <div class="cta-price">Rp 220 Jt</div>
+                <p>50 hari · Premier · Mandiri penuh</p>
+                <span class="cta-tag">Premium</span>
+            </div>
+        </div>
+        <div class="cta-summary">
+            <p><strong>Opsi A</strong> untuk memulai. <strong>Opsi B</strong> untuk operasional yang lancar. <strong>Opsi C</strong> untuk kemandirian penuh.</p>
+        </div>
+        <div class="cta-footer">
+            <p>PT Niaga Expert Teknologi</p>
+            <p>Bandung, Mei 2026 · nextskill.id</p>
+        </div>
+    </section>
+
+    <!-- NAVIGATION --><!-- NAVIGATION -->
+    <div class="nav">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <span class="slide-counter" id="slideCounter">1 / 18</span>
+        <button class="nav-btn" id="nextBtn" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
